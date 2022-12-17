@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width= device-width, initial scale=1.0">
+        <title>Image Portfolio</title>
+        <link rel="stylesheet" href="portfolio_image.css">
+    </head>
+<body>
+   
+  <main>
+
+</main>
+   <header>
+    <div class="logo">
+        <img src="images/green.png" alt="" style="width: 30%; left: 22%;">
+    </div>
+    <div class="navbar">
+        <a href="HOME.html">Home</a>
+    <a href="portfolio_image.html">Gallery</a>
+    <a href="Services Page.html">Services</a>
+    <a href="ABOUT PAGE.html">About</a>
+
+    </div>
+    
+
+    
+   </header>
+    
+    
+ <div class="gallery">
+ <div class="row">
+        <div class="column">
+            <img src="images/Marin_kitagawa.jpg" alt="blonde" onclick="myFunction(this);">
+            <img src="images/Blue_haired.jpg" alt="girl"  onclick="myFunction(this);" >
+            <img src="images/oc.jpg" alt="oc" onclick="myFunction(this);">
+            <img src="images/superman.jpg" alt="superman" onclick="myFunction(this);">
+            <img src="images/Komi_art.png" alt="komi" onclick="myFunction(this);">
+        </div>
+</div>
+ <div class="container">
+    <span onclick="this.parentElement.style.display='none'" class="closebtn"> &times;</span>
+    <img id="expandedImg" style="width: 45%;" >
+    <div id="imgtext"></div>
+   </div>
+
+   <script>
+    function myFunction(imgs){
+        var expandImg = document.getElementById("expandedImg");
+        var imgText = document.getElementById("imgtext");
+        expandedImg.src = imgs.src;
+        imgText.innerHTML = imgs.alt;
+        expandImg.parentElement.style.display = "block";
+
+    }
+   </script>
+   
+</body>
+</html>
